@@ -1,14 +1,10 @@
 import streamlit as st
 import pandas as pd
-import os
 from fuzzywuzzy import process
-import matplotlib.pyplot as plt
-import seaborn as sns
 
 # Load your CSV files into DataFrames
-csv_files = ["espn_clean.csv", "fantasypros_clean.csv", "fantraxhq_clean.csv", "pff_clean.csv", "rotoballer_clean.csv"]
-# data_folder = 'data'
-dataframes = [pd.read_csv for file in csv_files]
+csv_files = ["https://raw.githubusercontent.com/bhuggard-gsa/tmp-ffapp/main/espn_clean.csv", "https://raw.githubusercontent.com/bhuggard-gsa/tmp-ffapp/main/fantasypros_clean.csv", "https://raw.githubusercontent.com/bhuggard-gsa/tmp-ffapp/main/fantraxhq_clean.csv", "https://raw.githubusercontent.com/bhuggard-gsa/tmp-ffapp/main/pff_clean.csv", "https://raw.githubusercontent.com/bhuggard-gsa/tmp-ffapp/main/rotoballer_clean.csv"]
+dataframes = [pd.read_csv(file) for file in csv_files]
 
 # Capitalize the first and last name
 def capitalize_name(name):
