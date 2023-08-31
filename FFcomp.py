@@ -7,8 +7,8 @@ import seaborn as sns
 
 # Load your CSV files into DataFrames
 csv_files = ["espn_clean.csv", "fantasypros_clean.csv", "fantraxhq_clean.csv", "pff_clean.csv", "rotoballer_clean.csv"]
-data_folder = 'data'
-dataframes = [pd.read_csv(os.path.join(data_folder, file)) for file in csv_files]
+# data_folder = 'data'
+dataframes = [pd.read_csv for file in csv_files]
 
 # Capitalize the first and last name
 def capitalize_name(name):
